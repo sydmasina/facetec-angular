@@ -1,0 +1,44 @@
+<div class="wrapping-box-container">
+  <div id="main-interface">
+    <div id="controls" class="controls">
+      <div id="vocal-icon-container">
+        <div><img id="vocal-guidance-icon-minimal" disabled class="vocal-icon" src="../assets/sample-app-resources/images/vocal_minimal.png" (click)="onVocalGuidanceSettingsButtonPressed()"></div>
+        <div><img id="vocal-guidance-icon-full" disabled class="vocal-icon vocal-guidance-icon-full display-none" src="../assets/sample-app-resources/images/vocal_full.png" (click)="onVocalGuidanceSettingsButtonPressed()"></div>
+        <div><img id="vocal-guidance-icon-off" disabled class="vocal-icon vocal-guidance-icon-off display-none" src="../assets/sample-app-resources/images/vocal_minimal.png" (click)="onVocalGuidanceSettingsButtonPressed()"></div>
+      </div>
+        <!-- Button that will begin a Liveness Check -->
+        <button id="liveness-button" disabled (click)="onLivenessCheckPressed()" class="big-button">3D Liveness Check</button>
+        <button id="enrollment-button" disabled (click)="onEnrollmentPressed()" class="big-button">Enrollment</button>
+        <button id="authenticate-button" disabled (click)="onAuthenticatePreseed()" class="big-button">Autenticate</button>
+        <button id="phoid-button" disabled (click)="onPhotoIDPressed()" class="big-button">Photo ID Match</button>
+        <button id="photo-id-scan-button" disabled (click)="onPhotoIDScanPressed()" class="big-button ft-button">Scan & OCR ID</button>
+        <button id="audit-trail-button" disabled (click)="onViewAuditTrailPressed()" class="medium-button">View Audit Trail</button>
+        <button id="design-showcase-button" disabled (click)="onDesignShowcasePressed()" class="medium-button">Design Showcase</button>
+        <!-- The status container that will be updated appropriately based on current state of FaceTecSDK -->
+        <p id="status">Initializing...</p>
+    </div>
+  </div>
+  <div id="custom-logo-container">
+    <img class="facetec-logo" src="../assets/sample-app-resources/images/FaceTec_Logo.png">
+  </div>
+  <footer>
+    <span id="copy-right-section">
+      <p id="copy-right" class="footer-element-margin">&copy; 2021 FaceTec, Inc. &thinsp;&middot;&thinsp; Multiple US & International Patents Granted&thinsp;&middot;&thinsp; All Rights Reserved</p>
+      <hr class="hr display-none footer-element-margin">
+      <p class="footer-element-margin">
+        <a href="https://dev.facetec.com/policies/terms.html" target="_blank">Terms &amp; Conditions</a>
+        &thinsp;&middot;&thinsp; 
+        <a href="https://dev.facetec.com/policies/privacy_site.html" target="_blank">Site Privacy Policy</a>
+        &thinsp;&middot;&thinsp;
+        <a href="https://dev.facetec.com/policies/privacy_sdk.html" target="_blank">SDK Privacy Policy</a>
+      </p>
+    </span>
+  </footer>
+  <div id="copy-right-length">&copy; 2022 FaceTec, Inc. &thinsp;&middot;&thinsp; Multiple US & International Patents Granted&thinsp;&middot;&thinsp; All Rights Reserved</div>
+  <div class = "loading-session-token-container">
+    <p id="loading-session-token-text">Network Connection Slow...</p>
+  </div>
+  <div id="theme-transition-overlay">
+    <img id="theme-transition-overlay-img" onerror="this.style.display='none'" onload="this.style.display='block'" src="">
+  </div>
+</div>
